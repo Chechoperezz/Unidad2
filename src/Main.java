@@ -1,17 +1,61 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+                Producto producto = new Producto();
+                producto.registrarProducto();
+                producto.registrarProducto();
+                producto.registrarProducto();
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+                producto.showProducts();
+
+
+                Compra compra = new Compra();
+                compra.registrarCompra();
+                compra.registrarCompra();
+                compra.registrarCompra();
+                compra.getCompras();
+
+
+                System.out.println("PRODUCTOS ACTUALIZADOS DESPUES DE COMPRA: ");
+                producto.showProducts();
+
+
+                Clientes clientes = new Clientes();
+                clientes.registrarCliente();
+                clientes.realizarCompra();
+                clientes.realizarCompra();
+                clientes.realizarCompra();
+
+
+                System.out.println("CLIENTES REGSITRADOS");
+                clientes.getClientes();
+
+                clientes.actualizarCliente();
+
+                System.out.println("CLIENTES REGISTRADOS ACTUALIZADOS: ");
+                clientes.getClientes();
+
+                System.out.println("CLIENTES APTOS PARA DESCUENTOS: ");
+                clientes.aptoDescuentoExtra();
+
+                Venta venta = new Venta();
+
+                System.out.println("LISTA DE VENTAS: ");
+                venta.mostrarVentas();
+
+                System.out.println("PROMEDIO DE VENTAS: "+ venta.calcularPromedioDeVentas());
+                System.out.println("TOTAL DE VENTAS: "+venta.calcularTotalVentas());
+                System.out.println("TOTAL DE GANANCIAS: " + venta.calcularTotalGanancias());
+                System.out.println("TOTAL EN DESCUENTO GENERADO"+ venta.calcularTotalDescuentoGenerado());
+
+                System.out.println("INVERSIONES FUTURAS PARA PRODUCTOS: ");
+                System.out.println("INVERTIR MENOS: " + producto.InvertirMenos());
+                System.out.println("INVERTIR MAS: " + producto.InvertirMas());
+
+
+
+
+            }
         }
-    }
-}
+
+
